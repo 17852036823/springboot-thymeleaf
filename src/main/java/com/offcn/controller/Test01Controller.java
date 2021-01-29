@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Test01Controller {
 
     public void test(){
-
+        System.out.println("hello word");
     }
 
 }
