@@ -14,7 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class Test01Controller {
 
     public void test(){
-        System.out.println("hello word");
+            System.out.println("hello word");
+    }
+
+
+    public void test02(){
+        while(true){
+
+        }
     }
 
 }
