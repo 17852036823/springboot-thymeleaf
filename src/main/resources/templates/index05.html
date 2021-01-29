@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/pages-cart.css}">
+</head>
+<body>
+    <!--if---else-->
+    <h1 th:if="${flag=='yes'}">中公教育</h1>
+    <h1 th:unless="${flag=='yes'}">优就业</h1>
+
+<!--    switch选择语句-->
+    <div th:switch="${menu}">
+        <span th:case="admin">user is admin</span>
+        <span th:case="${manager}">user is manager</span>
+    </div>
+
+    <!--引入片段-->
+    <!--第一种-->
+    <div th:insert="~{footer::copy}"></div>
+    <!--第二种-->
+    <div th:include="~{footer::copy}"></div>
+    <!--第三种-->
+    <div th:replace="~{footer::copy}"></div>
+</body>
+</html>
